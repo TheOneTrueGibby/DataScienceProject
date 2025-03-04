@@ -19,6 +19,9 @@ data$Date <- format(data$Date, "%Y-%m")
 #print structure
 str(data)
 
+#get summary of data
+summary(data)
+
 #ensure the columns  and Air.Temperature.Average..degF. &  Snow.Water.Equivalent..in..Start.of.Month.Values are numeric
 data$Air.Temperature.Average..degF. <- as.numeric(data$Air.Temperature.Average..degF.)
 data$Snow.Water.Equivalent..in..Start.of.Month.Values <- as.numeric(data$Snow.Water.Equivalent..in..Start.of.Month.Values)
