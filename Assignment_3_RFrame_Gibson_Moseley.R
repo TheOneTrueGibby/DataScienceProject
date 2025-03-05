@@ -39,9 +39,9 @@ ggplot(data, aes(x = Air.Temperature.Average..degF., y = Snow.Water.Equivalent..
 
 #combined histogram for Air Temperature and Snow Water Equivalent
 ggplot(data) + 
-  geom_histogram(aes(x = Air.Temperature.Average..degF.), bins = 30, fill = "skyblue", color = "black", alpha = 0.7) + 
+  geom_histogram(aes(x = Air.Temperature.Average..degF.), bins = 35, fill = "skyblue", color = "black", alpha = 0.5) + 
   facet_wrap(~ "Temperature") +
-  geom_histogram(aes(x = Snow.Water.Equivalent..in..Start.of.Month.Values), bins = 30, fill = "lightgreen", color = "black", alpha = 0.7) + 
+  geom_histogram(aes(x = Snow.Water.Equivalent..in..Start.of.Month.Values), bins = 35, fill = "lightgreen", color = "black", alpha = 0.5) + 
   facet_wrap(~ "Snow Water Equivalent") +
   labs(
       title = "Histogram Comparison of Air Temperature and Snow Water Equivalent",
