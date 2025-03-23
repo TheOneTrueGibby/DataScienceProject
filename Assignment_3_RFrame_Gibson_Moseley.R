@@ -16,9 +16,12 @@ data$Date <- as.Date(paste("01", data$Date), format="%d %b %Y")
 #create a year-month column for easier grouping
 data$Date <- format(data$Date, "%Y-%m")
 
+#remove all values where Snow Water Equivalent is 0
+#data <- data %>% filter(Snow.Water.Equivalent..in..Start.of.Month.Values != 0)
+
 #ensure the columns  and Air.Temperature.Average..degF. &  Snow.Water.Equivalent..in..Start.of.Month.Values are numeric
-data$Air.Temperature.Average..degF. <- as.numeric(data$Air.Temperature.Average..degF.)
-data$Snow.Water.Equivalent..in..Start.of.Month.Values <- as.numeric(data$Snow.Water.Equivalent..in..Start.of.Month.Values)
+#data$Air.Temperature.Average..degF. <- as.numeric(data$Air.Temperature.Average..degF.)
+#data$Snow.Water.Equivalent..in..Start.of.Month.Values <- as.numeric(data$Snow.Water.Equivalent..in..Start.of.Month.Values)
 
 #print structure
 str(data)
